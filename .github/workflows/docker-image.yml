@@ -31,8 +31,8 @@ jobs:
       - name: Login to DockerHub
         uses: docker/login-action@v1
         with:
-          username: ${{ secrets.IMAGE_REGISTRY_USER }}
-          password: ${{ secrets.IMAGE_REGISTRY_PASSWORD }}
+          username: ${{ secrets.USER }}
+          password: ${{ secrets.PASSWORD }}
 
       - name: Build and Push Image
         run: |
@@ -67,8 +67,8 @@ jobs:
       - name: Login to DockerHub
         uses: docker/login-action@v1
         with:
-          username: ${{ secrets.IMAGE_REGISTRY_USER }}
-          password: ${{ secrets.IMAGE_REGISTRY_PASSWORD }}
+          username: ${{ secrets.USER }}
+          password: ${{ secrets.PASSWORD }}
 
       - name: Tag and Push Latest
         run: |
