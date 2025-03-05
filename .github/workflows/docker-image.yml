@@ -9,6 +9,7 @@ on:
 jobs:
   build:
     name: Docker Build
+    environment: githubactions
     runs-on: ubuntu-latest
     timeout-minutes: 60
     env:
@@ -44,6 +45,7 @@ jobs:
 
   push:
     name: Docker Push
+    environment: githubactions
     needs: build
     runs-on: ubuntu-latest
     timeout-minutes: 60
